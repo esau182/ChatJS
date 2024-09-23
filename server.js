@@ -13,6 +13,11 @@ const PORT = process.env.PORT || 5000;
 // Servir archivos estáticos desde la carpeta "client"
 app.use(express.static('client'));
 
+// Ruta para servir el archivo HTML principal
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/client/index.html');
+});
+
 // Configurar Socket.IO
 io.on('connection', (socket) => {
     console.log('A user connected');
@@ -28,10 +33,12 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => {
       console.log('A user disconnected');
     });
-  });
+});
 
 // Iniciar el servidor
 server.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+
 

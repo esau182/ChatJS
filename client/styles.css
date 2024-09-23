@@ -4,30 +4,33 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background: linear-gradient(to right, #f0f4ff, #ffe6e6);
     margin: 0;
 }
 
 main {
-    background-color: white;
-    width: 400px;
+    background-color: #e0f7fa;
+    width: 600px; 
+    height: 600px; 
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
 #messages {
-    height: 300px;
+    height: 80%; /* Ajusta la altura a un 80% del contenedor principal */
     overflow-y: scroll;
     padding: 20px;
     border-bottom: 1px solid #ddd;
     display: flex;
-    flex-direction: column; /* Asegúrate de que el contenedor use flex-direction */
+    flex-direction: column;
+    background-color: #e0f7fa;
 }
 
 #chat-form {
     display: flex;
     padding: 10px;
+    background-color: #fff5f5;
 }
 
 #message-input {
@@ -53,39 +56,79 @@ button:hover {
 
 /* Mensaje enviado alineado a la derecha (impar) - azul */
 .right {
+    position: relative;
     align-self: flex-end;
     background-color: #007bff; /* Azul */
     color: white;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 10px 15px;
+    border-radius: 20px;
     margin: 5px;
     max-width: 60%;
     word-wrap: break-word;
+    margin-right: 10px; /* Espacio a la derecha */
+}
+
+.right::after {
+    content: '';
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #007bff transparent transparent transparent;
+    top: 0;
+    right: -10px;
 }
 
 /* Mensaje enviado alineado a la izquierda (par) - rojo */
 .left {
+    position: relative;
     align-self: flex-start;
     background-color: #ff4d4d; /* Rojo */
     color: white;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 10px 15px;
+    border-radius: 20px;
     margin: 5px;
     max-width: 60%;
     word-wrap: break-word;
+    margin-left: 10px; /* Espacio a la izquierda */
+}
+
+.left::after {
+    content: '';
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #ff4d4d transparent transparent transparent;
+    top: 0;
+    left: -10px;
 }
 
 /* Mensaje recibido de otros usuarios */
 .received {
+    position: relative;
     align-self: flex-start;
     background-color: #e0e0e0; /* Fondo gris claro */
     color: black;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 10px 15px;
+    border-radius: 20px;
     margin: 5px;
     max-width: 60%;
     word-wrap: break-word;
+    margin-left: 10px; /* Espacio a la izquierda */
 }
+
+.received::after {
+    content: '';
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #e0e0e0 transparent transparent transparent;
+    top: 0;
+    left: -10px;
+}
+
+
+
+
 
 
 
