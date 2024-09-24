@@ -18,7 +18,7 @@ main {
 }
 
 #messages {
-    height: 80%; /* Ajusta la altura a un 80% del contenedor principal */
+    height: 80%;
     overflow-y: scroll;
     padding: 20px;
     border-bottom: 1px solid #ddd;
@@ -54,7 +54,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Mensaje enviado alineado a la derecha (impar) - azul */
+
 .right {
     position: relative;
     align-self: flex-end;
@@ -65,7 +65,7 @@ button:hover {
     margin: 5px;
     max-width: 60%;
     word-wrap: break-word;
-    margin-right: 10px; /* Espacio a la derecha */
+    margin-right: 10px;
 }
 
 .right::after {
@@ -78,18 +78,18 @@ button:hover {
     right: -10px;
 }
 
-/* Mensaje enviado alineado a la izquierda (par) - rojo */
+
 .left {
     position: relative;
     align-self: flex-start;
-    background-color: #ff4d4d; /* Rojo */
+    background-color: #ff4d4d;
     color: white;
     padding: 10px 15px;
     border-radius: 20px;
     margin: 5px;
     max-width: 60%;
     word-wrap: break-word;
-    margin-left: 10px; /* Espacio a la izquierda */
+    margin-left: 10px;
 }
 
 .left::after {
@@ -102,18 +102,19 @@ button:hover {
     left: -10px;
 }
 
+
 /* Mensaje recibido de otros usuarios */
 .received {
     position: relative;
     align-self: flex-start;
-    background-color: #e0e0e0; /* Fondo gris claro */
+    background-color: #e0e0e0; 
     color: black;
     padding: 10px 15px;
     border-radius: 20px;
     margin: 5px;
     max-width: 60%;
     word-wrap: break-word;
-    margin-left: 10px; /* Espacio a la izquierda */
+    margin-left: 10px; 
 }
 
 .received::after {

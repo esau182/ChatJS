@@ -25,7 +25,6 @@ io.on('connection', (socket) => {
     // Escuchar los mensajes enviados por el cliente
     socket.on('message', (msg) => {
       console.log('Message received:', msg);
-      // Enviar el mensaje a todos los demás clientes excepto al que lo envió
       socket.broadcast.emit('message', msg);
     });
   
